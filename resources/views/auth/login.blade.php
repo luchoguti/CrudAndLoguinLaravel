@@ -9,10 +9,10 @@
 				<div class="card-body">
 					<form method="POST" action="{{ route('login') }}">
 						{{ csrf_field() }}
-						<div class="form-group {{ $errors->has('email')? 'has-danger':'' }}">
-							<label for="email">Email</label>
-							<input class="form-control" type="email" name="email" placeholder="Ingresa tu Email" value="{{ old('email') }}">
-							{!! $errors->first('email','<div class="form-control-feedback">:message</div>') !!}
+						<div class="form-group {{ $errors->has('name')? 'has-danger':'' }}">
+							<label for="name">UserName</label>
+							<input class="form-control" type="text" name="name" placeholder="Ingresa tu username" value="{{ old('name') }}">
+							{!! $errors->first('name','<div class="form-control-feedback">:message</div>') !!}
 						</div>
 						<div class="form-group {{ $errors->has('password')? 'has-danger':'' }}">
 							<label for="password">Contraseña</label>
